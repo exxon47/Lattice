@@ -15,5 +15,8 @@
   <ItemGroup>
     <ProjectReference Include="libs\ObjectIR.Core\ObjectIR.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="libs\**\*.cs" />
+  </ItemGroup>
 
 </Project>

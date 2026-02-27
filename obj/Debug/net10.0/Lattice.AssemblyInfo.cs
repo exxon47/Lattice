@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lattice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e2ee0ffbdfe0039fd199b88ee93bd1e9bc50ee9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+727532fdb7cad885cc6556760a1b1397da217af1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lattice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lattice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
