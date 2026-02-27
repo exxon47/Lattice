@@ -1,0 +1,4 @@
+<Solution>
+    <Project Path="Lattice.csproj" />
+    <Project Path="libs\ObjectIR.Core\ObjectIR.Core.csproj" />
+</Solution>
