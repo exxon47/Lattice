@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\git\\ObjectIR.net\\libs\\lattice\\Lattice.csproj": {}
+    "D:\\git\\Lattice\\Lattice.csproj": {}
   },
   "projects": {
-    "D:\\git\\ObjectIR.net\\libs\\lattice\\Lattice.csproj": {
+    "D:\\git\\Lattice\\Lattice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\ObjectIR.net\\libs\\lattice\\Lattice.csproj",
+        "projectUniqueName": "D:\\git\\Lattice\\Lattice.csproj",
         "projectName": "Lattice",
-        "projectPath": "D:\\git\\ObjectIR.net\\libs\\lattice\\Lattice.csproj",
+        "projectPath": "D:\\git\\Lattice\\Lattice.csproj",
         "packagesPath": "C:\\Users\\GAMER\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\ObjectIR.net\\libs\\lattice\\obj\\",
+        "outputPath": "D:\\git\\Lattice\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\GAMER\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
@@ -36,11 +36,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\git\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.AST\\ObjectIR.AST.csproj": {
-                "projectPath": "D:\\git\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.AST\\ObjectIR.AST.csproj"
+              "D:\\git\\Lattice\\libs\\ObjectIR.AST\\ObjectIR.AST.csproj": {
+                "projectPath": "D:\\git\\Lattice\\libs\\ObjectIR.AST\\ObjectIR.AST.csproj"
               },
-              "D:\\git\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj": {
-                "projectPath": "D:\\git\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj"
+              "D:\\git\\Lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj": {
+                "projectPath": "D:\\git\\Lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj"
               }
             }
           }
@@ -362,14 +362,14 @@
         }
       }
     },
-    "D:\\git\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.AST\\ObjectIR.AST.csproj": {
+    "D:\\git\\Lattice\\libs\\ObjectIR.AST\\ObjectIR.AST.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.AST\\ObjectIR.AST.csproj",
+        "projectUniqueName": "D:\\git\\Lattice\\libs\\ObjectIR.AST\\ObjectIR.AST.csproj",
         "projectName": "ObjectIR.AST",
-        "projectPath": "D:\\git\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.AST\\ObjectIR.AST.csproj",
+        "projectPath": "D:\\git\\Lattice\\libs\\ObjectIR.AST\\ObjectIR.AST.csproj",
         "packagesPath": "C:\\Users\\GAMER\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.AST\\obj\\",
+        "outputPath": "D:\\git\\Lattice\\libs\\ObjectIR.AST\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\GAMER\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
@@ -705,14 +705,14 @@
         }
       }
     },
-    "D:\\git\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj": {
+    "D:\\git\\Lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj": {
       "version": "0.1.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj",
+        "projectUniqueName": "D:\\git\\Lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj",
         "projectName": "ObjectIR.Core",
-        "projectPath": "D:\\git\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj",
+        "projectPath": "D:\\git\\Lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj",
         "packagesPath": "C:\\Users\\GAMER\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\obj\\",
+        "outputPath": "D:\\git\\Lattice\\libs\\ObjectIR.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\GAMER\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",

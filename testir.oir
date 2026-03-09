@@ -1,0 +1,26 @@
+module TestProgram
+class Program {
+    static method Main() -> void {
+        // var TestProgram = new TestProgram()
+        newobj TestProgram()
+        callvirt TestProgram.hello() -> System.string 
+        call System.Console.WriteLine(string) -> void
+        ld.i4 5
+        ld.i4 5
+        call TestProgram.add(int32,int32) -> int32 
+
+        ret
+    }
+}
+class TestProgram {
+    method hello() -> System.string {
+        ldstr "hello world"
+        ret
+    }
+    method add(int32: a, int32: b) -> int32 {
+        ldarg a
+        ldarg b
+        add
+        ret
+    }
+}

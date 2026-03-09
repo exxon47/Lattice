@@ -3,6 +3,10 @@ using System.Text.Json;
 using lattice.IR;
 using lattice.Runtime;
 using lattice.TextIR;
+using ObjectIR.AST;
+
+using AstParser = ObjectIR.AST.TextIrParser;
+using LatticeParser = lattice.TextIR.TextIrParser;
 
 namespace lattice;
 
@@ -22,7 +26,8 @@ public sealed class IRRuntime
     {
         Auto,
         Json,
-        TextIr
+        TextIr,
+        Ast
     }
 
     private ModuleDto _program;
@@ -38,6 +43,7 @@ public sealed class IRRuntime
 
     private readonly Dictionary<(string declaringType, string fieldName), object?> _staticFields = new();
     private Dictionary<string, TypeDto> _typeMap = new(StringComparer.Ordinal);
+    private object? _lastReturnValue;
 
     public IRRuntime(string input = null, InputFormat format = InputFormat.Auto, bool enableReflectionNativeMethods = false)
     {
@@ -48,7 +54,8 @@ public sealed class IRRuntime
             _program = format switch
             {
                 InputFormat.Json => DeserializeJsonModule(input),
-                InputFormat.TextIr => TextIrParser.ParseModule(input),
+                InputFormat.TextIr => LatticeParser.ParseModule(input),
+                InputFormat.Ast => AstLowering.Lower(AstParser.ParseModule(input)),
                 _ => AutoParse(input)
             };
             _typeMap = BuildTypeMap();
@@ -113,9 +120,19 @@ public sealed class IRRuntime
         _program = format switch
         {
             InputFormat.Json => DeserializeJsonModule(input),
-            InputFormat.TextIr => TextIrParser.ParseModule(input),
+            InputFormat.TextIr => LatticeParser.ParseModule(input),
+            InputFormat.Ast => AstLowering.Lower(AstParser.ParseModule(input)),
             _ => AutoParse(input)
         };
+        _typeMap = BuildTypeMap();
+    }
+
+    /// <summary>
+    /// Load (or replace) the IR module from an already-parsed AST tree.
+    /// </summary>
+    public void LoadModule(ModuleNode astModule)
+    {
+        _program = AstLowering.Lower(astModule);
         _typeMap = BuildTypeMap();
     }
 
@@ -174,11 +191,16 @@ public sealed class IRRuntime
         if (methodDto == null)
             throw new MissingMethodException($"Method '{qualifiedName}' not found in loaded module.");
 
+        _lastReturnValue = null;
         var frame = new CallFrame(methodDto, args);
         _callStack.Push(frame);
         Execute();
 
-        return frame.EvalStack.Count > 0 ? frame.EvalStack.Pop() : null;
+        // If the method ended via a 'ret' instruction ExecuteReturn() already
+        // captured the value in _lastReturnValue.  If it fell off the end of
+        // its instruction list the value may still be sitting on the frame's
+        // eval-stack, so we check both.
+        return _lastReturnValue ?? (frame.EvalStack.Count > 0 ? frame.EvalStack.Pop() : null);
     }
     private static ModuleDto AutoParse(string input)
     {
@@ -186,7 +208,7 @@ public sealed class IRRuntime
         if (!trimmed.IsEmpty && (trimmed[0] == '{' || trimmed[0] == '['))
             return DeserializeJsonModule(input);
 
-        return TextIrParser.ParseModule(input);
+        return LatticeParser.ParseModule(input);
     }
 
     private static ModuleDto DeserializeJsonModule(string json)
@@ -669,9 +691,16 @@ public sealed class IRRuntime
         var frame = _callStack.Pop();
         object? returnValue = frame.EvalStack.Count > 0 ? frame.EvalStack.Pop() : null;
 
-        if (_callStack.Count > 0 && returnValue != null)
+        if (_callStack.Count > 0)
         {
-            _callStack.Peek().EvalStack.Push(returnValue);
+            if (returnValue != null)
+                _callStack.Peek().EvalStack.Push(returnValue);
+        }
+        else
+        {
+            // Returning from the top-level (entry-point) frame.
+            // Persist the value so CallMethod() can retrieve it.
+            _lastReturnValue = returnValue;
         }
     }
 
@@ -1024,7 +1053,8 @@ public sealed class IRRuntime
         _program = format switch
         {
             InputFormat.Json => DeserializeJsonModule(input),
-            InputFormat.TextIr => TextIrParser.ParseModule(input),
+            InputFormat.TextIr => LatticeParser.ParseModule(input),
+            InputFormat.Ast => AstLowering.Lower(AstParser.ParseModule(input)),
             _ => AutoParse(input)
         };
         // Reset runtime state

@@ -18,6 +18,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="libs\**\*.cs" />
+    <Compile Remove="Lattice.Tests\**\*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>Lattice.Tests</_Parameter1>
+    </AssemblyAttribute>
   </ItemGroup>
 
 </Project>
