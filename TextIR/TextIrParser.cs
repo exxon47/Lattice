@@ -824,7 +824,10 @@ internal static class TextIrParser
 
         private TextIrToken ConsumeIdentifier(string message)
         {
-            if (Peek().Type != TextIrTokenType.Identifier)
+            var t = Peek();
+            // Identifiers, instruction names (e.g. "add", "ret"), and non-structural keywords
+            // are all valid as names in declaration positions (method, field, type, parameter).
+            if (t.Type is not (TextIrTokenType.Identifier or TextIrTokenType.Instruction or TextIrTokenType.Keyword))
                 throw new FormatException(message);
             return Advance();
         }

@@ -104,6 +104,82 @@ public sealed class IRRuntime
             _nativeMethods[trimmed] = method;
         }
     }
+
+    /// <summary>
+    /// Load (or replace) the IR module from a TextIR or JSON string.
+    /// </summary>
+    public void LoadModule(string input, InputFormat format = InputFormat.Auto)
+    {
+        _program = format switch
+        {
+            InputFormat.Json => DeserializeJsonModule(input),
+            InputFormat.TextIr => TextIrParser.ParseModule(input),
+            _ => AutoParse(input)
+        };
+        _typeMap = BuildTypeMap();
+    }
+
+    /// <summary>
+    /// Call a method by "TypeName.MethodName" (or just "MethodName" to search all types)
+    /// with the given arguments and return the result cast to <typeparamref name="TResult"/>.
+    /// </summary>
+    public TResult CallMethod<TResult>(string qualifiedName, params object?[] args)
+    {
+        var result = CallMethod(qualifiedName, args);
+        if (result is null)
+            return default!;
+        if (result is TResult typed)
+            return typed;
+        return (TResult)ValueHelpers.ConvertTo(typeof(TResult), result);
+    }
+
+    /// <summary>
+    /// Call a method by "TypeName.MethodName" (or just "MethodName") with the given arguments.
+    /// </summary>
+    public object? CallMethod(string qualifiedName, params object?[] args)
+    {
+        if (_program == null)
+            throw new InvalidOperationException("No module loaded. Call LoadModule first.");
+
+        string? typeName = null;
+        string methodName = qualifiedName;
+        var dot = qualifiedName.LastIndexOf('.');
+        if (dot >= 0)
+        {
+            typeName = qualifiedName[..dot];
+            methodName = qualifiedName[(dot + 1)..];
+        }
+
+        TypeDto? typeDto = null;
+        MethodDto? methodDto = null;
+
+        if (typeName != null)
+        {
+            typeDto = _program.types.FirstOrDefault(t =>
+                string.Equals(t.name, typeName, StringComparison.Ordinal) ||
+                QualifiedNameMatches(t, typeName));
+            if (typeDto == null)
+                throw new InvalidOperationException($"Type '{typeName}' not found in loaded module.");
+            methodDto = typeDto.methods.FirstOrDefault(m => string.Equals(m.name, methodName, StringComparison.Ordinal));
+        }
+        else
+        {
+            foreach (var t in _program.types)
+            {
+                methodDto = t.methods.FirstOrDefault(m => string.Equals(m.name, methodName, StringComparison.Ordinal));
+                if (methodDto != null) { typeDto = t; break; }
+            }
+        }
+
+        if (methodDto == null)
+            throw new MissingMethodException($"Method '{qualifiedName}' not found in loaded module.");
+
+        var frame = new CallFrame(methodDto, args);
+        _callStack.Push(frame);
+        Execute();
+
+        return frame.EvalStack.Count > 0 ? frame.EvalStack.Pop() : null;
+    }
     private static ModuleDto AutoParse(string input)
     {
         var trimmed = input.AsSpan().TrimStart();
