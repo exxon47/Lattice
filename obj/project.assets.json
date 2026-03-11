@@ -80,29 +80,6 @@
           }
         }
       },
-      "FobGenerator/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "dependencies": {
-          "ObjectIR.AST": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/FobGenerator.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/FobGenerator.dll": {}
-        }
-      },
-      "ObjectIR.AST/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "compile": {
-          "bin/placeholder/ObjectIR.AST.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ObjectIR.AST.dll": {}
-        }
-      },
       "ObjectIR.Core/0.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -260,16 +237,6 @@
         "packageIcon.png"
       ]
     },
-    "FobGenerator/1.0.0": {
-      "type": "project",
-      "path": "libs/ObjectIR.FobCompiler/FobGenerator.csproj",
-      "msbuildProject": "libs/ObjectIR.FobCompiler/FobGenerator.csproj"
-    },
-    "ObjectIR.AST/1.0.0": {
-      "type": "project",
-      "path": "libs/ObjectIR.AST/ObjectIR.AST.csproj",
-      "msbuildProject": "libs/ObjectIR.AST/ObjectIR.AST.csproj"
-    },
     "ObjectIR.Core/0.1.0": {
       "type": "project",
       "path": "libs/ObjectIR.Core/ObjectIR.Core.csproj",
@@ -278,9 +245,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "FobGenerator >= 1.0.0",
       "Microsoft.NET.ILLink.Tasks >= 10.0.1",
-      "ObjectIR.AST >= 1.0.0",
       "ObjectIR.Core >= 0.1.0"
     ]
   },
@@ -309,14 +274,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/Users/charlie/Documents/GitHub/lattice/libs/ObjectIR.AST/ObjectIR.AST.csproj": {
-              "projectPath": "/Users/charlie/Documents/GitHub/lattice/libs/ObjectIR.AST/ObjectIR.AST.csproj"
-            },
             "/Users/charlie/Documents/GitHub/lattice/libs/ObjectIR.Core/ObjectIR.Core.csproj": {
               "projectPath": "/Users/charlie/Documents/GitHub/lattice/libs/ObjectIR.Core/ObjectIR.Core.csproj"
-            },
-            "/Users/charlie/Documents/GitHub/lattice/libs/ObjectIR.FobCompiler/FobGenerator.csproj": {
-              "projectPath": "/Users/charlie/Documents/GitHub/lattice/libs/ObjectIR.FobCompiler/FobGenerator.csproj"
             }
           }
         }

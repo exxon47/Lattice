@@ -200,7 +200,7 @@ public sealed class IRRuntime
     /// <summary>
     /// Load (or replace) the IR module from raw FOB/IR v3 binary bytes.
     /// The payload is deserialised via <see cref="ModuleBinaryReader.Read"/> —
-    /// no JSON parsing or AST lowering is performed.
+    /// no JSON parsing or AST lowering is required.
     /// </summary>
     public void LoadModule(byte[] fobBytes)
     {
