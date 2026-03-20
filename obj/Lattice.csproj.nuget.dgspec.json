@@ -1,33 +1,43 @@
 {
   "format": 1,
   "restore": {
-    "/Users/charlie/Documents/GitHub/lattice/Lattice.csproj": {}
+    "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\Lattice.csproj": {}
   },
   "projects": {
-    "/Users/charlie/Documents/GitHub/lattice/Lattice.csproj": {
+    "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\Lattice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/charlie/Documents/GitHub/lattice/Lattice.csproj",
+        "projectUniqueName": "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\Lattice.csproj",
         "projectName": "Lattice",
-        "projectPath": "/Users/charlie/Documents/GitHub/lattice/Lattice.csproj",
-        "packagesPath": "/Users/charlie/.nuget/packages/",
-        "outputPath": "/Users/charlie/Documents/GitHub/lattice/obj/",
+        "projectPath": "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\Lattice.csproj",
+        "packagesPath": "C:\\Users\\GAMER\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Users\\GAMER\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/charlie/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\GAMER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GAMER\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\GAMER\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/Users/charlie/Documents/GitHub/lattice/libs/ObjectIR.Core/ObjectIR.Core.csproj": {
-                "projectPath": "/Users/charlie/Documents/GitHub/lattice/libs/ObjectIR.Core/ObjectIR.Core.csproj"
+              "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj": {
+                "projectPath": "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj"
               }
             }
           }
@@ -42,7 +52,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -51,7 +61,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.1, )",
+              "version": "[10.0.5, )",
               "autoReferenced": true
             }
           },
@@ -66,12 +76,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[10.0.5, 10.0.5]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[10.0.5, 10.0.5]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[10.0.5, 10.0.5]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -347,24 +371,39 @@
             "System.Xml.XPath.XDocument": "(,5.0.32767]"
           }
         }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
       }
     },
-    "/Users/charlie/Documents/GitHub/lattice/libs/ObjectIR.Core/ObjectIR.Core.csproj": {
+    "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj": {
       "version": "0.1.0",
       "restore": {
-        "projectUniqueName": "/Users/charlie/Documents/GitHub/lattice/libs/ObjectIR.Core/ObjectIR.Core.csproj",
+        "projectUniqueName": "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj",
         "projectName": "ObjectIR.Core",
-        "projectPath": "/Users/charlie/Documents/GitHub/lattice/libs/ObjectIR.Core/ObjectIR.Core.csproj",
-        "packagesPath": "/Users/charlie/.nuget/packages/",
-        "outputPath": "/Users/charlie/Documents/GitHub/lattice/libs/ObjectIR.Core/obj/",
+        "projectPath": "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj",
+        "packagesPath": "C:\\Users\\GAMER\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Users\\GAMER\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/charlie/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\GAMER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GAMER\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\GAMER\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -383,7 +422,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -412,11 +451,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
+              "version": "[8.0.25, 8.0.25]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
+              "version": "[8.0.25, 8.0.25]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.25, 8.0.25]"
             }
           ],
           "frameworkReferences": {
@@ -424,7 +467,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
