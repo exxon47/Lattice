@@ -14,10 +14,8 @@
 
   <ItemGroup>
     <ProjectReference Include="libs\ObjectIR.Core\ObjectIR.Core.csproj" />
-    <ProjectReference Include="libs\ObjectIR.AST\ObjectIR.AST.csproj" />
-    <ProjectReference Include="libs\ObjectIR.FobCompiler\FobGenerator.csproj" />
   </ItemGroup>
-  <ItemGroup>
+ <ItemGroup>
     <Compile Remove="libs\**\*.cs" />
     <Compile Remove="Lattice.Tests\**\*.cs" />
     <Compile Remove="Lattice.Decompiler\**\*.cs" />
