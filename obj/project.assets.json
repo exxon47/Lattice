@@ -61,101 +61,7 @@
           }
         }
       },
-      "Microsoft.NET.ILLink.Tasks/10.0.5": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.NET.ILLink.Tasks.props": {}
-        }
-      },
-      "MongoDB.Bson/2.25.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.1/MongoDB.Bson.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/MongoDB.Bson.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "ObjectIR.Core/0.1.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "JsonSchema.Net": "7.0.3",
-          "MongoDB.Bson": "2.25.0"
-        },
-        "compile": {
-          "bin/placeholder/ObjectIR.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ObjectIR.Core.dll": {}
-        }
-      }
-    },
-    "net10.0/win-x64": {
-      "Humanizer.Core/2.14.1": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Humanizer.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Humanizer.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Json.More.Net/2.0.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/Json.More.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Json.More.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "JsonPointer.Net/5.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Humanizer.Core": "2.14.1",
-          "Json.More.Net": "2.0.1.2"
-        },
-        "compile": {
-          "lib/net8.0/JsonPointer.Net.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/JsonPointer.Net.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "JsonSchema.Net/7.0.3": {
-        "type": "package",
-        "dependencies": {
-          "JsonPointer.Net": "5.0.0"
-        },
-        "compile": {
-          "lib/net8.0/JsonSchema.Net.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/JsonSchema.Net.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.NET.ILLink.Tasks/10.0.5": {
+      "Microsoft.NET.ILLink.Tasks/10.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -262,10 +168,10 @@
         "lib/netstandard2.0/JsonSchema.Net.xml"
       ]
     },
-    "Microsoft.NET.ILLink.Tasks/10.0.5": {
-      "sha512": "A+5ZuQ0f449tM+MQrhf6R9ZX7lYpjk/ODEwLYKrnF6111rtARx8fVsm4YznUnQiKnnXfaXNBqgxmil6RW3L3SA==",
+    "Microsoft.NET.ILLink.Tasks/10.0.4": {
+      "sha512": "CCx8ojW3mOL150/LnP0DK7qpMrJEt6xxNCmJFKoX89v1h0FwpsEHqennowGPYDxp6zIkIO4f9PxynjOeLF+1zw==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/10.0.5",
+      "path": "microsoft.net.illink.tasks/10.0.4",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -278,7 +184,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.10.0.5.nupkg.sha512",
+        "microsoft.net.illink.tasks.10.0.4.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net/ILLink.Tasks.deps.json",
         "tools/net/ILLink.Tasks.dll",
@@ -339,49 +245,37 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Microsoft.NET.ILLink.Tasks >= 10.0.5",
+      "Microsoft.NET.ILLink.Tasks >= 10.0.4",
       "ObjectIR.Core >= 0.1.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\GAMER\\.nuget\\packages\\": {},
-    "C:\\Users\\GAMER\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/charlie/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\Lattice.csproj",
+      "projectUniqueName": "/home/charlie/Documents/git/V12/libs/ObjectIR.net/libs/lattice/Lattice.csproj",
       "projectName": "Lattice",
-      "projectPath": "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\Lattice.csproj",
-      "packagesPath": "C:\\Users\\GAMER\\.nuget\\packages\\",
-      "outputPath": "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\obj\\",
+      "projectPath": "/home/charlie/Documents/git/V12/libs/ObjectIR.net/libs/lattice/Lattice.csproj",
+      "packagesPath": "/home/charlie/.nuget/packages/",
+      "outputPath": "/home/charlie/Documents/git/V12/libs/ObjectIR.net/libs/lattice/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Users\\GAMER\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\GAMER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Users\\GAMER\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/charlie/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "C:\\Users\\GAMER\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj": {
-              "projectPath": "D:\\git\\V12\\libs\\ObjectIR.net\\libs\\lattice\\libs\\ObjectIR.Core\\ObjectIR.Core.csproj"
+            "/home/charlie/Documents/git/V12/libs/ObjectIR.net/libs/lattice/libs/ObjectIR.Core/ObjectIR.Core.csproj": {
+              "projectPath": "/home/charlie/Documents/git/V12/libs/ObjectIR.net/libs/lattice/libs/ObjectIR.Core/ObjectIR.Core.csproj"
             }
           }
         }
@@ -396,7 +290,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net10.0": {
@@ -405,7 +299,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[10.0.5, )",
+            "version": "[10.0.4, )",
             "autoReferenced": true
           }
         },
@@ -422,16 +316,8 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[10.0.5, 10.0.5]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[10.0.5, 10.0.5]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[10.0.5, 10.0.5]"
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[10.0.4, 10.0.4]"
           }
         ],
         "frameworkReferences": {
@@ -439,7 +325,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.104/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -714,11 +600,6 @@
           "System.Xml.XPath": "(,4.3.32767]",
           "System.Xml.XPath.XDocument": "(,5.0.32767]"
         }
-      }
-    },
-    "runtimes": {
-      "win-x64": {
-        "#import": []
       }
     }
   }
